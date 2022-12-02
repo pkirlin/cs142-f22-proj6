@@ -124,14 +124,19 @@ public class GameObject {
         this.imageFilename = imageFilename;
     }
 
-    /** Get this GameObject's border color. */
+    /** Get this GameObject's border color.  null indicates no border. */
     public Color getBorderColor() {
         return borderColor;
     }
 
-    /** Set this GameObject's border color. */
+    /** Set this GameObject's border color.  null indicates no border. */
     public void setBorderColor(Color borderColor) {
         this.borderColor = borderColor;
+    }
+    
+    /** Remove this GameObject's border entirely (equivalent to setting it to null). */
+    public void removeBorder() {
+        this.borderColor = null;
     }
 
     /** Get this GameObject's height. */
