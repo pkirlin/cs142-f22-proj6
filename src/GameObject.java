@@ -42,9 +42,9 @@ public class GameObject {
      */
     public void draw(SimpleCanvas canvas)
     {
-        canvas.setPenColor(borderColor);
         // Can adjust the size of the border with the 2 and 4 below.
         if (borderColor != null) {  // draw if color is not null, otherwise we have no border.
+            canvas.setPenColor(borderColor);
             canvas.drawFilledRectangle(getLeftX() - 2, getTopY() - 2, width + 4, height + 4);
         }
         canvas.drawImage(getLeftX(), getTopY(), imageFilename, width, height);
